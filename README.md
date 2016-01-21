@@ -1,3 +1,4 @@
-The OpenShift `nodejs` cartridge documentation can be found at:
+# clock_app
 
-http://openshift.github.io/documentation/oo_cartridge_guide.html#nodejs
+it's a simple Clock web app.
+it shows the current time.
