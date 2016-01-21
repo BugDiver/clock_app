@@ -8,4 +8,4 @@ var sendCurrentTime = function(req,res){
 app.use(express.static('public'));
 
 app.get('/update',sendCurrentTime)
-app.listen(process.env.OPEN);
+app.listen(process.env.OPENSHIFT_NODEJS_PORT||8080,process.env.OPENSHIFT_NODEJS_IP);
