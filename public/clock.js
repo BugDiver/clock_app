@@ -47,7 +47,7 @@ var showTime = function(data){
 };
 
 var updateClock = function(){
-   $.get('update',{date : new Date()} ,function(data){
+   $.get('update',{date : new Date().toLocaleTimeString()} ,function(data){
       revertColor();
       showTime(data);
    });
