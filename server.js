@@ -1,10 +1,14 @@
 var express = require('express');
+var bodyParser = require('body-parser');
 var app = express();
 var Clock =require('./lib/clockLib.js');
 
+
 var sendCurrentTime = function(req,res){
-   res.send(new Clock().currentTime);
-}
+	var offset = req.query.offset;
+   res.send(new Clock(+offset).currentTime);
+};
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('public'));
 
 app.get('/update',sendCurrentTime)
