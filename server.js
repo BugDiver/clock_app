@@ -5,8 +5,8 @@ var Clock =require('./lib/clockLib.js');
 
 
 var sendCurrentTime = function(req,res){
-	var offset = req.query.offset;
-   res.send(new Clock(+offset).currentTime);
+	var date = req.query.date;
+   res.send(new Clock(date).currentTime);
 };
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('public'));

@@ -47,7 +47,7 @@ var showTime = function(data){
 };
 
 var updateClock = function(){
-   $.get('update',{offset : new Date().getTimezoneOffset()} ,function(data){
+   $.get('update',{date : new Date()} ,function(data){
       revertColor();
       showTime(data);
    });
